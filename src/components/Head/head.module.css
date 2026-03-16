@@ -1,0 +1,8 @@
+.head{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    background-color: white;
+    box-shadow: 10px 10px whitesmoke;
+
+}

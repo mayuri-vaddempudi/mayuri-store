@@ -1,0 +1,34 @@
+.hero{
+    height: 100vh;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    grid-template-areas:
+      "womens mens kids"
+      "womens cosmetics accessories";
+    text-align: center;
+    height: 500px;
+}
+
+.womens{
+    grid-area: womens;
+
+}
+
+.mens{
+    grid-area: mens;
+}
+
+.kids{
+    grid-area: kids;
+}
+
+.cosmetics{
+    grid-area: cosmetics;
+}
+
+.accessories{
+    grid-area: accessories;
+}

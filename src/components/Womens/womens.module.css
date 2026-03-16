@@ -1,0 +1,12 @@
+.womens{
+    height: 100%;
+    background-image: url(../../assets/images/women.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+.womens a{
+    list-style-type:none;
+    text-decoration: underline;
+}

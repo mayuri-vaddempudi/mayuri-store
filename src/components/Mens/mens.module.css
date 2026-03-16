@@ -1,0 +1,9 @@
+.mens{
+    height: 100%;
+    background-image: url(../../assets/images/men.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+    list-style-type:none;
+}
