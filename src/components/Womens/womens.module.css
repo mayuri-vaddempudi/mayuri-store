@@ -1,12 +1,77 @@
-.womens{
-    height: 100%;
+
+.womens {
+    height: 100%; 
     background-image: url(../../assets/images/women.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    text-align: center;
-}
-.womens a{
-    list-style-type:none;
-    text-decoration: underline;
-}
+  
+    display: flex;          
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: flex-start;
+    padding-left: 50px;     
+    padding-right: 20px;               
+  }
+  
+  /* Heading style */
+  .womens h3 {
+    font-size: 50px;
+    margin: 0;
+  }
+  
+ 
+  .dancingScript {
+    font-family: "Dancing Script", cursive;
+    font-weight: 400;
+    font-style: italic;
+    font-optical-sizing: auto;
+    font-variation-settings: "wdth" 100;
+    font-size: 2rem; 
+  }
+  
+  /* Description paragraph */
+  .womenDiscription {
+    text-align: left;      
+    font-size: 1.2rem;
+    margin-top: 15px;
+    max-width: 600px;      
+    line-height: 1.5;
+  }
+  
+ 
+  .womenShoping {
+    text-align: left;
+    margin-top: 20px;
+    list-style: none;       
+  }
+  
+  .womens a {
+    text-decoration: none;
+    border-bottom: 2px solid red;
+    padding-bottom: 2px;          
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .womens a:hover {
+    color: red;
+    border-color: white;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .womens {
+      padding-left: 20px;
+      justify-content: center;
+    }
+  
+    .womens h3 {
+      font-size: 36px;
+    }
+  
+    .womenDiscription {
+      font-size: 1rem;
+      max-width: 90%;
+    }
+  }
