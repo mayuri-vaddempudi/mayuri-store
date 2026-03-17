@@ -20,3 +20,42 @@
     font-weight: 500;
     transition: all 0.3s ease;
 }
+
+@media (max-width: 1024px) {
+   .mens {
+        padding-left: 30px;
+        padding-right: 15px;
+    }
+
+   .mens a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mens {
+        padding-left: 20px;
+        padding-right: 10px;
+        align-items: center;
+        text-align: center;
+    }
+
+   .mens a {
+        font-size: 13px;
+        border-bottom: 1px solid red;
+    }
+}
+
+@media (max-width: 480px) {
+     .mens {
+        padding-left: 15px;
+        padding-right: 150px;
+       height: 250px;
+    }
+
+    .mens a {
+        font-size: 12px;
+        border-bottom: 1px solid red;
+        padding-bottom: 1px;
+    }
+}

@@ -1,9 +1,17 @@
+import { useState } from "react";
 import styles from "./navigation.module.css";
+import Cart from "../Cart";
 
 const Navigation = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div className={styles.navigation}>
-      <ul>
+    <nav className={styles.navigation}>
+      <div className={styles.hamburger} onClick={() => setIsOpen(!isOpen)}>
+        ☰
+      </div>
+
+      <ul className={`${styles.menu} ${isOpen ? styles.active : ""}`}>
         <li>
           <a href="#">HOME</a>
         </li>
@@ -11,7 +19,7 @@ const Navigation = () => {
           <a href="#">WOMENS</a>
         </li>
         <li>
-          <a href="#">MEN´S</a>
+          <a href="#">MENS</a>
         </li>
         <li>
           <a href="#">SHOP</a>
@@ -26,7 +34,10 @@ const Navigation = () => {
           <a href="#">CONTACT</a>
         </li>
       </ul>
-    </div>
+      <div className={styles.cartContainer}>
+        <Cart />
+      </div>
+    </nav>
   );
 };
 
