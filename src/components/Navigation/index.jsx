@@ -33,10 +33,10 @@ const Navigation = () => {
         <li>
           <a href="#">CONTACT</a>
         </li>
+        <div className={styles.cartContainer}>
+          <Cart />
+        </div>
       </ul>
-      <div className={styles.cartContainer}>
-        <Cart />
-      </div>
     </nav>
   );
 };

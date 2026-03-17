@@ -1,61 +1,171 @@
-.hero{
-    height: 100vh;
-    display: grid;
+/* Hero container: 2 halves */
+.hero {
+    display: flex;
+    width: 100%;
+    height: 600px; /* adjust as needed */
     gap: 10px;
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-      "womens mens kids"
-      "womens cosmetics accessories";
-    text-align: center;
-    height: 500px;
-    margin-top: 10px;
-
-}
-
-.womens{
-    grid-area: womens;
-
-}
-
-.mens{
-    grid-area: mens;
-}
-
-.kids{
-    grid-area: kids;
-}
-
-.cosmetics{
-    grid-area: cosmetics;
-}
-
-.accessories{
-    grid-area: accessories;
-}
-@media (max-width: 1024px) {
+  }
+  
+  /* Left side: Women's card (50%) */
+  .womensContainer {
+    flex: 1;
+  }
+  
+  /* Right side: 2x2 grid for other categories (50%) */
+  .otherCategories {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  /* Base styles for all cards */
+  .categoryCard,
+  .womensCard {
+    position: relative;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    color: white;
+  }
+  
+  /* Overlay for readability */
+  .categoryCard::before,
+  .womensCard::before {
+    content: "";
+    position: absolute;
+    top:0; left:0; right:0; bottom:0;
+    background: rgba(0,0,0,0.3);
+    z-index: 1;
+  }
+  
+  .categoryCard > *, .womensCard > * {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Text styling */
+  .categoryCard h3,
+  .womensCard h3 {
+    margin-bottom: 10px;
+  }
+  
+  .womensCard h3 {
+    font-family: "Dancing Script", cursive;
+    font-size: 2.5rem;
+  }
+  
+  .womensCard p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Shop button */
+  .categoryCard button,
+  .womensCard button {
+    background: transparent;
+    border: none;
+  }
+  
+  .categoryCard a,
+  .womensCard a {
+    text-decoration: none;
+    border-bottom: 2px solid red;
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .categoryCard a:hover,
+  .womensCard a:hover {
+    color: red;
+    border-color: white;
+  }
+  
+  /* Responsive: Tablets */
+  @media (max-width: 1024px) {
     .hero {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto auto;
-        grid-template-areas:
-            "womens mens"
-            "kids cosmetics"
-            "accessories accessories";
-        height: auto;
+      height: 500px;
     }
-}
-
-
-@media (max-width: 600px) {
+    .womensCard h3 {
+      font-size: 2rem;
+    }
+    .womensCard p {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Responsive: Mobile */
+  @media (max-width: 768px) {
     .hero {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto auto auto;
-        grid-template-areas:
-            "womens"
-            "mens"
-            "kids"
-            "cosmetics"
-            "accessories";
-        height: auto;
+      flex-direction: column;
+      height: auto;
     }
-}
+    .womensContainer,
+    .otherCategories {
+      width: 100%;
+      flex: 1;
+    }
+    .otherCategories {
+      grid-template-columns: 1fr 1fr; /* still 2 per row */
+      grid-template-rows: repeat(2, 150px); /* height of each card */
+      gap: 10px;
+    }
+    .categoryCard,
+    .womensCard {
+      height: 250px;
+      padding: 15px;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  
+  /* Small mobile */
+  @media (max-width: 480px) {
+    .hero {
+      flex-direction: column; /* stack women + other categories */
+      height: auto;           /* auto height for content */
+    }
+  
+    .womensContainer,
+    .otherCategories {
+      width: 100%;
+      flex: 1;
+    }
+  
+    /* Stack all other categories vertically */
+    .otherCategories {
+      display: grid;
+      grid-template-columns: 1fr; /* 1 column */
+      grid-template-rows: auto;   /* auto height for each card */
+      gap: 10px;
+    }
+  
+    .categoryCard,
+    .womensCard {
+      height: 200px; /* adjust as needed */
+      padding: 10px;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .womensCard h3 {
+      font-size: 1.8rem;
+    }
+  
+    .womensCard p {
+      font-size: 0.9rem;
+    }
+  
+    .categoryCard a,
+    .womensCard a {
+      font-size: 12px;
+      border-bottom: 1px solid red;
+    }
+  }

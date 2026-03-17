@@ -14,7 +14,7 @@
     padding-right: 20px;               
   }
   
-  /* Heading style */
+  
   .womens h3 {
     font-size: 50px;
     margin: 0;
@@ -30,7 +30,7 @@
     font-size: 2rem; 
   }
   
-  /* Description paragraph */
+  
   .womenDiscription {
     text-align: left;      
     font-size: 1.2rem;
@@ -59,7 +59,7 @@
     border-color: white;
   }
   
-  /* Responsive adjustments */
+  
   @media (max-width: 768px) {
     .womens {
       padding-left: 20px;

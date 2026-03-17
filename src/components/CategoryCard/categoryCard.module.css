@@ -1,10 +1,10 @@
-.kids {
+.categoryCard{
     height: 100%;
-    background-image: url("../../assets/images/kids.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    list-style-type: none;
+   
+    list-style-type:none;
     display: flex;          
     flex-direction: column; 
     justify-content: center; 
@@ -12,23 +12,7 @@
     padding-left: 50px;     
     padding-right: 20px;  
 }
-
-.overlay {
-    color: white;
-}
-
-.overlay a {
-    display: inline-block;
-    margin-top: 8px;
-    text-decoration: none;
-    background: black;
-    color: white;
-    padding: 6px 12px;
-    font-size: 14px;
-    list-style-type: none;
-}
-
-.kids a {
+.categoryCard a{
     text-decoration: none;
     border-bottom: 2px solid red;
     padding-bottom: 2px;          
@@ -36,55 +20,39 @@
     transition: all 0.3s ease;
 }
 
-/* Responsive Styles */
 @media (max-width: 1024px) {
-    .kids {
+    .categoryCard {
         padding-left: 30px;
         padding-right: 15px;
     }
 
-    .overlay a {
-        padding: 5px 10px;
-        font-size: 13px;
-    }
-
-    .kids a {
+   .categoryCard a {
         font-size: 14px;
     }
 }
 
 @media (max-width: 768px) {
-    .kids {
+    .categoryCard {
         padding-left: 20px;
         padding-right: 10px;
-        align-items: center; /* center for smaller screens */
+        align-items: center;
         text-align: center;
     }
 
-    .overlay a {
-        padding: 5px 8px;
-        font-size: 12px;
-    }
-
-    .kids a {
+   .categoryCard a {
         font-size: 13px;
         border-bottom: 1px solid red;
     }
 }
 
 @media (max-width: 480px) {
-    .kids {
+     .categoryCard {
         padding-left: 15px;
         padding-right: 150px;
-        height: 250px;
+       height: 250px;
     }
 
-    .overlay a {
-        padding: 4px 6px;
-        font-size: 11px;
-    }
-
-    .kids a {
+    .categoryCard a {
         font-size: 12px;
         border-bottom: 1px solid red;
         padding-bottom: 1px;
